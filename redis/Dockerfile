@@ -4,7 +4,7 @@ RUN mkdir build && cd build && \
     git clone https://github.com/redis/hiredis.git && \
     cd hiredis && git reset --hard e0f4820 && \
     make -j$(nproc) && make install && \
-    rm -Rf /app/build \
+    rm -Rf /app/build
 
 RUN mkdir build && cd build && \
     git clone https://github.com/sewenew/redis-plus-plus.git && \

@@ -30,9 +30,9 @@ RUN mkdir build && cd build && \
      make -j`nproc` && make install && \
      rm -Rf /app/build
 
-RUN /bin/sh -c mkdir build && cd build && \
+RUN mkdir build && cd build && \
      git clone https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3.git && \
      cd etcd-cpp-apiv3 && git reset --hard ca0e352 && \
      mkdir build && cd build && cmake .. && \
      make -j$(nproc) && make install && \
-     rm -Rf /app/build # buildkit
+     rm -Rf /app/build
